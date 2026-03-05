@@ -1,0 +1,98 @@
+.appShell {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 28px 16px 20px;
+  gap: 18px;
+}
+
+.card {
+  width: 100%;
+  max-width: 760px;
+  margin: 0 auto;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.footer {
+  max-width: 760px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 6px 6px 0;
+}
+
+.footerText {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.primaryButton,
+.ghostButton,
+.dangerButton {
+  border-radius: 12px;
+  border: 1px solid transparent;
+  padding: 10px 12px;
+  cursor: pointer;
+  transition: transform 120ms ease, box-shadow 120ms ease, background 120ms ease,
+    border-color 120ms ease, opacity 120ms ease;
+  user-select: none;
+}
+
+.primaryButton {
+  background: var(--primary);
+  color: white;
+  box-shadow: 0 6px 14px rgba(59, 130, 246, 0.25);
+}
+
+.primaryButton:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 22px rgba(59, 130, 246, 0.28);
+}
+
+.ghostButton {
+  background: #f8fafc;
+  border-color: var(--border);
+  color: var(--text);
+}
+
+.ghostButton:hover {
+  transform: translateY(-1px);
+  border-color: #d1d5db;
+}
+
+.dangerButton {
+  background: rgba(239, 68, 68, 0.12);
+  border-color: rgba(239, 68, 68, 0.22);
+  color: #b91c1c;
+}
+
+.dangerButton:hover {
+  transform: translateY(-1px);
+  background: rgba(239, 68, 68, 0.16);
+  border-color: rgba(239, 68, 68, 0.26);
+}
+
+.primaryButton:disabled,
+.ghostButton:disabled,
+.dangerButton:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+@media (min-width: 720px) {
+  .appShell {
+    padding-top: 40px;
+  }
+
+  .card {
+    padding: 22px;
+  }
+}
